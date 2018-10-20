@@ -10,7 +10,6 @@ public class Validaciones_Modulo_Cuota_Ordinaria {
     
     public void Permitido( boolean valor1, DatePicker fecha, AnchorPane Mensaje ){
         
-        
         if( valor1 == true){
     
             fecha.setValue ( null );
@@ -71,6 +70,24 @@ public class Validaciones_Modulo_Cuota_Ordinaria {
                 }
             }
             
+        } );
+    }
+    
+    public void Costo ( TextField costo ) {
+        
+        costo.setOnKeyTyped ( new EventHandler < KeyEvent > ( ) {
+            @Override
+            public void handle ( KeyEvent event ) {
+                
+                String c = event.getCharacter ( );
+                char c1 = c.charAt ( 0 );
+                
+                if ( ! Character.isDigit ( c1 ) ) {
+                    
+                    event.consume ( );
+                    
+                }
+            }
         } );
     }
 }

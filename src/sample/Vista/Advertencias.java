@@ -101,13 +101,30 @@ public class Advertencias {
     
                 Advertencia.setVisible ( true );
                 
-              }
+              }else{
+    
+                Advertencia.setVisible ( false );
+                
+            }
             } else {
         
                 Advertencia.setVisible ( false );
             }
         }
+    
+    public void Advertencia_Existe_Nombre_Usuario(int verificacion, Pane Advertencia){
         
+        if(verificacion == 1){
+            
+            Advertencia.setVisible(true);
+            
+        }else{
+            
+            Advertencia.setVisible ( false );
+            
+        }
+    }
+    
         public void Advertencia_Nombre_Usuario(int verificacion, Pane Advertencia){
         
         if(verificacion == 0){

@@ -136,6 +136,10 @@ public class Validaciones_Datos_Persona {
                     
                     event.consume ( );
                     
+                }else if ( numero_telefono.getText ( ).length ( ) > 6 ) {
+    
+                    event.consume ( );
+                    
                 }
             }
         } );
@@ -165,7 +169,7 @@ public class Validaciones_Datos_Persona {
         if ( años < 18 || años > 90 ) {
             
             fecha.setValue ( null );
-            fecha.setPromptText ( "FECHA DE NACIMIENTO NO ADMITIDA" );
+            fecha.setPromptText ( " NO ADMITIDA" );
             
         }
     }

@@ -1,0 +1,75 @@
+﻿.table-view .column-header .label{
+    -fx-text-fill:  #2284d0;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view, .table-view:focused {
+  -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+
+// tama�o, bordes y color de fondo de los titulos
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #ffffff;
+    -fx-size: 40;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-insets: 0;
+}
+
+.table-view{
+	-fx-border-color:derive(gray,80%);
+}
+ 
+/* The main scrollbar CSS class of ListView */
+.table-view .scroll-bar:horizontal ,
+.table-view  .scroll-bar:vertical{
+    -fx-background-color:transparent;
+ 
+}
+ 
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track ,
+.table-view .scroll-bar:vertical .track{
+     -fx-background-color: transparent;
+	 -fx-border-color:derive(gray,80%);
+	 -fx-background-radius: 0em;
+}
+ 
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #074269,0%);
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 0em;
+ 
+}
+ 
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+ 
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
+ 
+.table-view .scroll-bar:horizontal:hover .track ,
+.table-view .scroll-bar:horizontal:pressed .track ,
+.table-view .scroll-bar:vertical:hover .track,
+.table-view .scroll-bar:vertical:pressed .track{
+     -fx-background-color: derive(#434343,20%);
+ 
+	 -fx-opacity: 0.2;
+	 -fx-background-radius: 0em;
+ 
+}
+ 
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+.table-view .scroll-bar .thumb:hover,
+.table-view .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(black,50%);
+}
+ 
